@@ -1,0 +1,21 @@
+{% extends 'CursosyEventosApp/base.html'%}
+{%load static %}
+
+{%block tituloPagina%}
+Crear Curso - AppCyE
+{%endblock%}
+
+{%block contenidoPagina%}
+<h2>Crea un curso nuevo:</h2>
+<form action="" method="post">
+    {% csrf_token %}
+    
+    {% comment %}<!-- <p>Curso: <input type="text" name="curso" id="" maxlength="30"></p>
+
+    <p>Comision: <input type="number" name="comision" id="" min="0"></p> -->{% endcomment %}
+    
+    {{ form.as_p }}
+    <input type="submit" value="Crear curso">
+</form>
+{%endblock%}
+{% comment %} El as_p me tira los valores del formulario uno debajo del otro {% endcomment %}
